@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Emerald City</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<style>
+			body {
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				line-height: 1.6;
+				margin: 0;
+				color: #333;
+			}
+			.container {
+				max-width: 960px;
+				padding: 20px;
+				margin: 0 auto;
+			}
+			#logo {
+				text-align: center;
+			}
+			.trinity {
+				display: flex;
+				gap: 10px;
+				text-align: center;
+				flex-wrap: wrap;
+
+				justify-content: center;
+			}
+			.trifold {
+				width: 300px;
+			}
+			.intro {
+				font-size: 34px;
+				text-align: center;
+			}
+			.icon {
+				width: 64px;
+				height: 64px;
+			}
+			.faq-boxes {
+				display: flex;
+				gap: 20px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.faq-box {
+				min-width: 350px;
+				flex: 1;
+			}
+			h3 {
+				font-size: 30px;
+				font-weight: 200;
+			}
+
+			.prefold {
+				min-height: 80vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container prefold">
+			<h1 id="logo">
+				<img
+					src="logo.png"
+					class="animate__animated animate__fadeInUp"
+					alt="Emerald City Logo"
+					width="128"
+					height="128"
+				/>
+			</h1>
+
+			<div class="intro animate__animated animate__fadeInUp">
+				<p>
+					<strong>Emerald City</strong> is an experimental framework for deploying
+					<strong>autonomous cloud services</strong>.
+				</p>
+			</div>
+
+			<div class="trinity">
+				<div class="trifold animate__animated animate__fadeInLeft">
+					<img src="autonomous.png" alt="Autonomous Icon" class="icon" />
+					<p>
+						<strong>Autonomous</strong> means that the application can run without any
+						central owner.
+					</p>
+					<p>
+						The original developer can stop participating and the network will still
+						continue to operate.
+					</p>
+				</div>
+				<div class="trifold animate__animated animate__fadeInUp">
+					<img src="cloud.png" alt="Cloud Icon" class="icon" />
+					<p>
+						<strong>Cloud</strong> means that these applications are hosted on large
+						public clouds such as AWS, rather than on ordinary hardware.
+					</p>
+					<p>
+						This restriction is the key to the “remote attestation” scheme that makes
+						Emerald City possible.
+					</p>
+				</div>
+				<div class="trifold animate__animated animate__fadeInRight">
+					<img src="services.png" alt="Services Icon" class="icon" />
+					<p>
+						<strong>Services</strong> could include databases, and backends for social
+						networks, proxies, games, and more.
+					</p>
+
+					<p>
+						Services can be written in any language and are deployed as Docker
+						containers.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<style>
+			.block {
+				text-align: center;
+				color: #a28530;
+				margin: 2px;
+				border-radius: 3px;
+				display: inline-block;
+				width: 100px;
+				height: 30px;
+				border: 1px solid #dddd66;
+				position: absolute;
+				text-decoration: none;
+				font-family: monospace;
+
+				display: grid;
+				align-items: center;
+			}
+			.block:hover {
+				opacity: 1;
+				transform: scale(1.1);
+				transition: all 0.1s linear;
+			}
+			.blockroad {
+				position: relative;
+				margin: 83px auto;
+				height: 42px;
+				transform: rotate(-2deg);
+				left: -1087px;
+				width: 0px;
+			}
+			h2.faqhead {
+				position: absolute;
+				margin: 12px;
+				font-size: 30px;
+			}
+			.blocktainer {
+				overflow: hidden;
+			}
+		</style>
+		<div class="blocktainer">
+		<div class="blockroad">
+			<a
+				class="block"
+				href="https://etherscan.io/block/1087"
+				style="background: #dac62b; left: 0px; top: 0px"
+				>1087</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/1637"
+				style="background: #e9d247; left: 105px; top: 0px"
+				>1637</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/2585"
+				style="background: #e0d04a; left: 210px; top: 0px"
+				>2585</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/3020"
+				style="background: #e1cf53; left: 315px; top: 0px"
+				>3020</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/3377"
+				style="background: #e6ce43; left: 420px; top: 0px"
+				>3377</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/3472"
+				style="background: #e5db1e; left: 525px; top: 0px"
+				>3472</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/4429"
+				style="background: #e9dd45; left: 630px; top: 0px"
+				>4429</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/7717"
+				style="background: #dfce3b; left: 735px; top: 0px"
+				>7717</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/8203"
+				style="background: #e6e05d; left: 840px; top: 0px"
+				>8203</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/8312"
+				style="background: #e7d76f; left: 945px; top: 0px"
+				>8312</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/8857"
+				style="background: #e7dd53; left: 1050px; top: 0px"
+				>8857</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/9794"
+				style="background: #e9d046; left: 1155px; top: 0px"
+				>9794</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/10361"
+				style="background: #dbd22c; left: 1260px; top: 0px"
+				>10361</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/11437"
+				style="background: #e5cf2b; left: 1365px; top: 0px"
+				>11437</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/13804"
+				style="background: #dec73f; left: 1470px; top: 0px"
+				>13804</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/14405"
+				style="background: #e3dc21; left: 1575px; top: 0px"
+				>14405</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/14872"
+				style="background: #e7d357; left: 1680px; top: 0px"
+				>14872</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/15476"
+				style="background: #e4de3e; left: 1785px; top: 0px"
+				>15476</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/15543"
+				style="background: #e6ce25; left: 1890px; top: 0px"
+				>15543</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/16496"
+				style="background: #ddca2e; left: 1995px; top: 0px"
+				>16496</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/19039"
+				style="background: #decc38; left: 55px; top: 35px"
+				>19039</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/19936"
+				style="background: #e7da5c; left: 160px; top: 35px"
+				>19936</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/20399"
+				style="background: #ece072; left: 265px; top: 35px"
+				>20399</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/21191"
+				style="background: #e5ce3a; left: 370px; top: 35px"
+				>21191</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/23631"
+				style="background: #e4ce2d; left: 475px; top: 35px"
+				>23631</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/24262"
+				style="background: #e2ca2a; left: 580px; top: 35px"
+				>24262</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/24332"
+				style="background: #e7d860; left: 685px; top: 35px"
+				>24332</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/25142"
+				style="background: #e5cb2e; left: 790px; top: 35px"
+				>25142</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/26264"
+				style="background: #e9dc71; left: 895px; top: 35px"
+				>26264</a
+			>
+			<h2 class="faqhead" style="left: 1020px; top: 35px">FAQs</h2>
+			<a
+				class="block"
+				href="https://etherscan.io/block/27367"
+				style="background: #e5db36; left: 1210px; top: 35px"
+				>27367</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/31464"
+				style="background: #e5d027; left: 1315px; top: 35px"
+				>31464</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/32345"
+				style="background: #dfd23c; left: 1420px; top: 35px"
+				>32345</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/32406"
+				style="background: #e6d850; left: 1525px; top: 35px"
+				>32406</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/33273"
+				style="background: #e5dd4f; left: 1630px; top: 35px"
+				>33273</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/33483"
+				style="background: #e5de47; left: 1735px; top: 35px"
+				>33483</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/33593"
+				style="background: #e6d741; left: 1840px; top: 35px"
+				>33593</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/35004"
+				style="background: #ebe657; left: 1945px; top: 35px"
+				>35004</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/35044"
+				style="background: #ecd865; left: 2050px; top: 35px"
+				>35044</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/35092"
+				style="background: #e3da25; left: 0px; top: 70px"
+				>35092</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/35168"
+				style="background: #ddc336; left: 105px; top: 70px"
+				>35168</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/37425"
+				style="background: #dfc831; left: 210px; top: 70px"
+				>37425</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/39216"
+				style="background: #dbcd31; left: 315px; top: 70px"
+				>39216</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/41094"
+				style="background: #ece56d; left: 420px; top: 70px"
+				>41094</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/41156"
+				style="background: #e6d84f; left: 525px; top: 70px"
+				>41156</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/42105"
+				style="background: #e8e23c; left: 630px; top: 70px"
+				>42105</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/42581"
+				style="background: #e2db4f; left: 735px; top: 70px"
+				>42581</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/43836"
+				style="background: #e2c320; left: 840px; top: 70px"
+				>43836</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/44346"
+				style="background: #e3c81f; left: 1155px; top: 70px"
+				>44346</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/45368"
+				style="background: #e1c534; left: 1260px; top: 70px"
+				>45368</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/45449"
+				style="background: #e5cf55; left: 1365px; top: 70px"
+				>45449</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/47052"
+				style="background: #e8e365; left: 1470px; top: 70px"
+				>47052</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/47950"
+				style="background: #e3c726; left: 1575px; top: 70px"
+				>47950</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/49098"
+				style="background: #e0c42f; left: 1680px; top: 70px"
+				>49098</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/49586"
+				style="background: #e5c72a; left: 1785px; top: 70px"
+				>49586</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/49703"
+				style="background: #e4cc1c; left: 1890px; top: 70px"
+				>49703</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/49800"
+				style="background: #dbc328; left: 1995px; top: 70px"
+				>49800</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/50327"
+				style="background: #e9e14d; left: 55px; top: 105px"
+				>50327</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/54648"
+				style="background: #ddd227; left: 160px; top: 105px"
+				>54648</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/54827"
+				style="background: #ead64e; left: 265px; top: 105px"
+				>54827</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/55144"
+				style="background: #e5d861; left: 370px; top: 105px"
+				>55144</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/55558"
+				style="background: #e9e175; left: 475px; top: 105px"
+				>55558</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/55955"
+				style="background: #e8ce43; left: 580px; top: 105px"
+				>55955</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/57215"
+				style="background: #e4d034; left: 685px; top: 105px"
+				>57215</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/57662"
+				style="background: #e7d05c; left: 790px; top: 105px"
+				>57662</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/57723"
+				style="background: #e7d12d; left: 895px; top: 105px"
+				>57723</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/58237"
+				style="background: #ede568; left: 1000px; top: 105px"
+				>58237</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/58352"
+				style="background: #ebe26c; left: 1105px; top: 105px"
+				>58352</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/59034"
+				style="background: #e3dc2c; left: 1210px; top: 105px"
+				>59034</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/60028"
+				style="background: #dccc24; left: 1315px; top: 105px"
+				>60028</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/60648"
+				style="background: #e8dd70; left: 1420px; top: 105px"
+				>60648</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/61805"
+				style="background: #e3d639; left: 1525px; top: 105px"
+				>61805</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/61936"
+				style="background: #e8d251; left: 1630px; top: 105px"
+				>61936</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/62954"
+				style="background: #e5d857; left: 1735px; top: 105px"
+				>62954</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/63272"
+				style="background: #dfd32f; left: 1840px; top: 105px"
+				>63272</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/63854"
+				style="background: #e6ce33; left: 1945px; top: 105px"
+				>63854</a
+			><a
+				class="block"
+				href="https://etherscan.io/block/64041"
+				style="background: #ddcf25; left: 2050px; top: 105px"
+				>64041</a
+			>
+		</div>
+	</div>
+
+		<div class="container">
+			<div class="faq-section">
+				<div class="faq-boxes">
+					<div class="faq-box">
+						<h3>How does this differ from a Blockchain?</h3>
+						<div class="toggle-content">
+							<p>
+								<strong>Off Premises:</strong> Blockchains can run on arbitrary
+								servers operated by anybody—whereas Emerald City only runs on
+								servers maintained by large public clouds like AWS.
+							</p>
+							<p>
+								<strong>Scalable:</strong> Blockchain networks aggressively
+								replicate data across nodes to protect against Byzantine faults.
+								This means computing and storing data on blockchains is extremely
+								expensive.
+							</p>
+							<p>
+								<strong>Private:</strong> Blockchain networks can not generally
+								compute on private information—as any information that is to be
+								computed on needs to be shared with the entire network. When they do
+								try to compute with private information, it is in very narrow
+								contexts using very complicated cryptography (e.g., shielding
+								transactions with zk-SNARKs). In general, no public chain
+								applications can simply store and operate on private data like one
+								would with an ordinary backend.
+							</p>
+							<p>
+								<strong>Insider Vulnerability:</strong> If a rogue system
+								administrator within the AWS organization could compromise the
+								internal network security, they could potentially compromise the
+								foundation of Emerald City.
+							</p>
+						</div>
+					</div>
+					<div class="faq-box">
+						<h3>How does this differ from traditional hosting?</h3>
+						<div class="toggle-content">
+							<p>
+								<strong>Auditable:</strong> With Emerald City, an end user can
+								verify the code which is being run on a server to ensure that the
+								application that they're using respects their privacy. With
+								traditional application hosting, the user simply has to blindly
+								trust that the application developer won't ever try to monetize user
+								data.
+							</p>
+							<p>
+								<strong>Permissionless:</strong> With Emerald City, anyone with an
+								AWS account can launch a node and fully participate in the operation
+								of an application. With traditional application deployment systems,
+								only the application developer can launch new instances of an
+								application.
+							</p>
+							<p>
+								<strong>Resilient:</strong> The original developer can stop
+								participating and the network will still continue to operate, so
+								long as any members of the community maintains a running node.
+							</p>
+							<p>
+								<strong>Opaque:</strong> Whereas traditional hosting offers a lot of
+								ways in which application developers can remotely administer servers
+								or debug applications, Emerald City exposes a locked-down
+								environment which is hard to debug.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
