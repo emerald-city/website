@@ -14,6 +14,7 @@
 				line-height: 1.6;
 				margin: 0;
 				color: #333;
+				border-top: 10px solid #20c586;
 			}
 			.container {
 				max-width: 960px;
@@ -41,20 +42,6 @@
 			.icon {
 				width: 64px;
 				height: 64px;
-			}
-			.faq-boxes {
-				display: flex;
-				gap: 20px;
-				flex-wrap: wrap;
-				justify-content: center;
-			}
-			.faq-box {
-				min-width: 350px;
-				flex: 1;
-			}
-			h3 {
-				font-size: 30px;
-				font-weight: 200;
 			}
 
 			.prefold {
@@ -92,8 +79,9 @@
 						central owner.
 					</p>
 					<p>
-						The original developer can stop participating and the application will still
-						continue to operate, as long as someone is running a node.
+						Anyone with an AWS account can launch nodes that fully participate in an
+						application network. The original developer can stop participating and the
+						application will still continue to operate.
 					</p>
 				</div>
 				<div class="trifold animate__animated animate__fadeInUp">
@@ -104,20 +92,21 @@
 					</p>
 					<p>
 						This restriction is the key to the “remote attestation” scheme that makes
-						Emerald City possible, ensuring that not even node operators can exfiltrate
-						or manipulate application data.
+						Emerald City possible, ensuring that node operators can not read or tamper
+						with private information stored inside their nodes..
 					</p>
 				</div>
 				<div class="trifold animate__animated animate__fadeInRight">
 					<img src="services.png" alt="Services Icon" class="icon" />
 					<p>
-						<strong>Services</strong> could include databases, and social networks,
-						proxies, games, and more.
+						<strong>Services</strong> could include databases, social networks, proxies,
+						games, and more.
 					</p>
 
 					<p>
 						Services can be written in any language and are deployed as Docker
-						containers.
+						containers. Distributed databases can be used to resiliently share state
+						across nodes.
 					</p>
 				</div>
 			</div>
@@ -132,7 +121,7 @@
 				display: inline-block;
 				width: 100px;
 				height: 30px;
-				border: 1px solid #dddd66;
+				border: 1px solid #d3ba6f;
 				position: absolute;
 				text-decoration: none;
 				font-family: monospace;
@@ -551,11 +540,31 @@
 			</div>
 		</div>
 
+		<style>
+			.faq-boxes {
+				display: flex;
+				gap: 20px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.faq-box {
+				min-width: 350px;
+				flex: 1;
+			}
+			h3 {
+				font-size: 30px;
+				font-weight: 200;
+			}
+			hr {
+				border: 0;
+				border-bottom: 1px solid #bbb;
+			}
+		</style>
 		<div class="container">
 			<div class="faq-section">
 				<div class="faq-boxes">
 					<div class="faq-box">
-						<h3>How does this differ from a Blockchain?</h3>
+						<h3>How does this differ from a blockchain?</h3>
 						<div class="toggle-content">
 							<p>
 								<strong>Off Premises:</strong> Blockchains can run on arbitrary
@@ -585,6 +594,15 @@
 								to operate gateways to web apps. Emerald City applications can
 								directly host web accessible endpoints.
 							</p>
+							<p>
+								<strong>Portable:</strong> Blockchain applications typically require
+								writing applications in special smart contract languages with
+								specific limitations on the amount of compute and data which can be
+								used. With Emerald City, applications can compute, store, and
+								transfer data with almost no overhead using any language that can be
+								embedded in a Docker container.
+							</p>
+							<hr />
 							<p>
 								<strong>Insider Vulnerability:</strong> If a rogue system
 								administrator within the AWS organization could compromise the
@@ -622,15 +640,484 @@
 								be adapted to a distributed environment to synchronize data between
 								nodes.
 							</p>
+							<hr />
 							<p>
 								<strong>Opaque:</strong> Whereas traditional hosting offers a lot of
 								ways in which application developers can remotely administer servers
 								or debug applications, Emerald City exposes a locked-down
 								environment which is hard to debug.
 							</p>
+							<p>
+								<strong>Immutable:</strong> Certain aspects of an Emerald City
+								deployment can't be changed, which can make it difficult to guard
+								against certain security vulnerabilities, especially those against
+								the core runtime.
+							</p>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<style>
+			table.apps {
+				width: 100%;
+			}
+			table.apps th {
+				text-align: left;
+				padding-right: 10px;
+			}
+		</style>
+		<div class="container">
+			<div class="faq-box">
+				<h3>What kinds of applications can you build with Emerald City?</h3>
+				<table class="apps">
+					<tbody>
+						<tr>
+							<th>Genetic Screening Service</th>
+							<td>
+								A service for people to upload generic sequences for screening
+								against particular diseases without the fear that the data is copied
+								and sold to the highest bidder
+							</td>
+						</tr>
+						<tr>
+							<th>Product Launch Mailing List</th>
+							<td>
+								An email waitlist that allows users to sign up for a notification
+								when a product is launched, without allowing the developer to abuse
+								those emails
+							</td>
+						</tr>
+						<tr>
+							<th>Semi-Decentralized Bridge</th>
+							<td>
+								A system for bridging different layer 1 blockchain networks together
+								without requiring a lot of chain specific complexity
+							</td>
+						</tr>
+						<tr>
+							<th>TLS Notary</th>
+							<td>
+								An server that allows users to generate notary proofs of HTTPS
+								requests (see TLS Notary)
+							</td>
+						</tr>
+						<tr>
+							<th>Decentralized Social Network</th>
+							<td>
+								A social network where users can not be censored and where private
+								user data can not be mined
+							</td>
+						</tr>
+						<tr>
+							<th>Proxy Service</th>
+							<td>
+								A proxy service which keeps no user logs and can be individually
+								audited by any technical user
+							</td>
+						</tr>
+						<tr>
+							<th>& more</th>
+							<td>Anything</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="faq-box">
+				<h3>How does Emerald City work?</h3>
+				<p>TODO</p>
+			</div>
+		</div>
+
+		<div class="blocktainer">
+			<div class="blockroad">
+				<a
+					class="block"
+					href="https://etherscan.io/block/1087"
+					style="background: #dac62b; left: 0px; top: 0px"
+					>1087</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/1637"
+					style="background: #e9d247; left: 105px; top: 0px"
+					>1637</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/2585"
+					style="background: #e0d04a; left: 210px; top: 0px"
+					>2585</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/3020"
+					style="background: #e1cf53; left: 315px; top: 0px"
+					>3020</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/3377"
+					style="background: #e6ce43; left: 420px; top: 0px"
+					>3377</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/3472"
+					style="background: #e5db1e; left: 525px; top: 0px"
+					>3472</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/4429"
+					style="background: #e9dd45; left: 630px; top: 0px"
+					>4429</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/7717"
+					style="background: #dfce3b; left: 735px; top: 0px"
+					>7717</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/8203"
+					style="background: #e6e05d; left: 840px; top: 0px"
+					>8203</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/8312"
+					style="background: #e7d76f; left: 945px; top: 0px"
+					>8312</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/8857"
+					style="background: #e7dd53; left: 1050px; top: 0px"
+					>8857</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/9794"
+					style="background: #e9d046; left: 1155px; top: 0px"
+					>9794</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/10361"
+					style="background: #dbd22c; left: 1260px; top: 0px"
+					>10361</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/11437"
+					style="background: #e5cf2b; left: 1365px; top: 0px"
+					>11437</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/13804"
+					style="background: #dec73f; left: 1470px; top: 0px"
+					>13804</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/14405"
+					style="background: #e3dc21; left: 1575px; top: 0px"
+					>14405</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/14872"
+					style="background: #e7d357; left: 1680px; top: 0px"
+					>14872</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/15476"
+					style="background: #e4de3e; left: 1785px; top: 0px"
+					>15476</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/15543"
+					style="background: #e6ce25; left: 1890px; top: 0px"
+					>15543</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/16496"
+					style="background: #ddca2e; left: 1995px; top: 0px"
+					>16496</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/19039"
+					style="background: #decc38; left: 55px; top: 35px"
+					>19039</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/19936"
+					style="background: #e7da5c; left: 160px; top: 35px"
+					>19936</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/20399"
+					style="background: #ece072; left: 265px; top: 35px"
+					>20399</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/21191"
+					style="background: #e5ce3a; left: 370px; top: 35px"
+					>21191</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/23631"
+					style="background: #e4ce2d; left: 475px; top: 35px"
+					>23631</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/24262"
+					style="background: #e2ca2a; left: 580px; top: 35px"
+					>24262</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/24332"
+					style="background: #e7d860; left: 685px; top: 35px"
+					>24332</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/25142"
+					style="background: #e5cb2e; left: 790px; top: 35px"
+					>25142</a
+				>
+				<h2 class="faqhead" style="left: 958px; top: 35px; width: 360px">
+					Getting Started
+				</h2>
+				<a
+					class="block"
+					href="https://etherscan.io/block/27367"
+					style="background: #e5db36; left: 1210px; top: 35px"
+					>27367</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/31464"
+					style="background: #e5d027; left: 1315px; top: 35px"
+					>31464</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/32345"
+					style="background: #dfd23c; left: 1420px; top: 35px"
+					>32345</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/32406"
+					style="background: #e6d850; left: 1525px; top: 35px"
+					>32406</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/33273"
+					style="background: #e5dd4f; left: 1630px; top: 35px"
+					>33273</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/33483"
+					style="background: #e5de47; left: 1735px; top: 35px"
+					>33483</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/33593"
+					style="background: #e6d741; left: 1840px; top: 35px"
+					>33593</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/35004"
+					style="background: #ebe657; left: 1945px; top: 35px"
+					>35004</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/35044"
+					style="background: #ecd865; left: 2050px; top: 35px"
+					>35044</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/35092"
+					style="background: #e3da25; left: 0px; top: 70px"
+					>35092</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/35168"
+					style="background: #ddc336; left: 105px; top: 70px"
+					>35168</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/37425"
+					style="background: #dfc831; left: 210px; top: 70px"
+					>37425</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/39216"
+					style="background: #dbcd31; left: 315px; top: 70px"
+					>39216</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/41094"
+					style="background: #ece56d; left: 420px; top: 70px"
+					>41094</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/41156"
+					style="background: #e6d84f; left: 525px; top: 70px"
+					>41156</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/42105"
+					style="background: #e8e23c; left: 630px; top: 70px"
+					>42105</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/42581"
+					style="background: #e2db4f; left: 735px; top: 70px"
+					>42581</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/43836"
+					style="background: #e2c320; left: 840px; top: 70px"
+					>43836</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/45368"
+					style="background: #e1c534; left: 1260px; top: 70px"
+					>45368</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/45449"
+					style="background: #e5cf55; left: 1365px; top: 70px"
+					>45449</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/47052"
+					style="background: #e8e365; left: 1470px; top: 70px"
+					>47052</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/47950"
+					style="background: #e3c726; left: 1575px; top: 70px"
+					>47950</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/49098"
+					style="background: #e0c42f; left: 1680px; top: 70px"
+					>49098</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/49586"
+					style="background: #e5c72a; left: 1785px; top: 70px"
+					>49586</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/49703"
+					style="background: #e4cc1c; left: 1890px; top: 70px"
+					>49703</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/49800"
+					style="background: #dbc328; left: 1995px; top: 70px"
+					>49800</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/50327"
+					style="background: #e9e14d; left: 55px; top: 105px"
+					>50327</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/54648"
+					style="background: #ddd227; left: 160px; top: 105px"
+					>54648</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/54827"
+					style="background: #ead64e; left: 265px; top: 105px"
+					>54827</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/55144"
+					style="background: #e5d861; left: 370px; top: 105px"
+					>55144</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/55558"
+					style="background: #e9e175; left: 475px; top: 105px"
+					>55558</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/55955"
+					style="background: #e8ce43; left: 580px; top: 105px"
+					>55955</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/57215"
+					style="background: #e4d034; left: 685px; top: 105px"
+					>57215</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/57662"
+					style="background: #e7d05c; left: 790px; top: 105px"
+					>57662</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/57723"
+					style="background: #e7d12d; left: 895px; top: 105px"
+					>57723</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/58237"
+					style="background: #ede568; left: 1000px; top: 105px"
+					>58237</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/58352"
+					style="background: #ebe26c; left: 1105px; top: 105px"
+					>58352</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/59034"
+					style="background: #e3dc2c; left: 1210px; top: 105px"
+					>59034</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/60028"
+					style="background: #dccc24; left: 1315px; top: 105px"
+					>60028</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/60648"
+					style="background: #e8dd70; left: 1420px; top: 105px"
+					>60648</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/61805"
+					style="background: #e3d639; left: 1525px; top: 105px"
+					>61805</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/61936"
+					style="background: #e8d251; left: 1630px; top: 105px"
+					>61936</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/62954"
+					style="background: #e5d857; left: 1735px; top: 105px"
+					>62954</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/63272"
+					style="background: #dfd32f; left: 1840px; top: 105px"
+					>63272</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/63854"
+					style="background: #e6ce33; left: 1945px; top: 105px"
+					>63854</a
+				><a
+					class="block"
+					href="https://etherscan.io/block/64041"
+					style="background: #ddcf25; left: 2050px; top: 105px"
+					>64041</a
+				>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="faq-box">
+				<center>
+					<h3>TODO</h3>
+				</center>
 			</div>
 		</div>
 	</body>
