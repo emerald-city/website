@@ -160,7 +160,7 @@
 				overflow: hidden;
 			}
 		</style>
-		<div class="blocktainer">
+		<div class="blocktainer animate__animated animate__fadeInUp">
 			<div class="blockroad">
 				<a
 					class="block"
@@ -563,7 +563,8 @@
 								<strong>Scalable:</strong> Blockchain networks aggressively
 								replicate data across nodes to protect against Byzantine faults.
 								This means computing and storing data on blockchains is extremely
-								expensive.
+								expensive. Since the remote attestation scheme ensures the nodes are
+								not malicious, applications can scale more easily.
 							</p>
 							<p>
 								<strong>Private:</strong> Blockchain networks can not generally
@@ -572,8 +573,14 @@
 								try to compute with private information, it is in very narrow
 								contexts using very complicated cryptography (e.g., shielding
 								transactions with zk-SNARKs). In general, no public chain
-								applications can simply store and operate on private data like one
-								would with an ordinary backend.
+								applications can store and operate on private data like one would
+								with an ordinary backend.
+							</p>
+							<p>
+								<strong>Web Native:</strong> Blockchain applications typically
+								communicate over custom protocols and require trusted third parties
+								to operate gateways to web apps. Emerald City applications can
+								directly host web accessible endpoints.
 							</p>
 							<p>
 								<strong>Insider Vulnerability:</strong> If a rogue system
@@ -605,6 +612,10 @@
 								<strong>Resilient:</strong> The original developer can stop
 								participating and the network will still continue to operate, so
 								long as any members of the community maintains a running node.
+							</p>
+							<p>
+								<strong>Distributed:</strong> Applications should be structured so
+								that they synchronize data between nodes.
 							</p>
 							<p>
 								<strong>Opaque:</strong> Whereas traditional hosting offers a lot of
